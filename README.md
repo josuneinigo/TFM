@@ -2,7 +2,7 @@
 
 Código del Trabajo Fin de Máster (TFM) del Máster en Lógica, Computación e
 Inteligencia Artificial. El proyecto parte del pipeline de **Dai et al.
-(2022)** — descrito más abajo — y lo amplía sustituyendo su etapa de
+(2022)** (descrito más abajo) y lo amplía sustituyendo su etapa de
 clustering de parches histológicos por dos *foundation models* de
 histopatología (**Phikon-v2** y **CTransPath**), además de introducir varias
 mejoras en el entrenamiento y la evaluación.
@@ -12,8 +12,7 @@ mejoras en el entrenamiento y la evaluación.
 >
 > - [`metodo_original/`](metodo_original/): código de los autores del
 >   artículo original (ver cita más abajo), movido de sitio para poder
->   organizar el repositorio pero **sin modificar su lógica**. Todo el
->   mérito de esta parte es suyo.
+>   organizar el repositorio pero **sin modificar su lógica**. 
 > - [`extension_phikon_ctranspath/`](extension_phikon_ctranspath/): código
 >   propio desarrollado para este TFM, que amplía el trabajo anterior.
 >
@@ -165,17 +164,3 @@ python -m extension_phikon_ctranspath.evaluate_patient_level_phikon <clusters...
 Antes de ejecutar, revisa la variable `BASE` al principio de cada script:
 apunta a la ruta absoluta del proyecto en el cluster donde se entrenó
 originalmente y hay que adaptarla a tu propia máquina.
-
-## Checkpoints y resultados
-
-Los pesos entrenados (`checkpoints/`, varios GB) y los logs de
-entrenamiento no se incluyen en el repositorio (ver `.gitignore`). Los
-resultados numéricos (accuracy por cluster, RMSE, etc.) sí están en
-`reporting/`, y las gráficas generadas en `reporting/figures/`.
-
-## Licencia
-
-El código propio de este TFM se comparte con fines académicos. Ten en
-cuenta que **Phikon-v2** se distribue bajo la licencia no comercial de
-Owkin ([ver licencia](https://huggingface.co/owkin/phikon-v2/blob/main/LICENSE.pdf)),
-por lo que su uso queda restringido a fines de investigación/académicos.
