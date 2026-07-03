@@ -1,4 +1,4 @@
-# Predicción del tiempo de supervivencia global (OS) en glioblastoma
+# Inteligencia artificial con spiking neural P systems - Josune Iñigo Marco
 
 Código del Trabajo Fin de Máster (TFM) del Máster en Lógica, Computación e
 Inteligencia Artificial. El proyecto parte del pipeline de **Dai et al.
